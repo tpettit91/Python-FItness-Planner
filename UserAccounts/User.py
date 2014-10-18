@@ -1,6 +1,6 @@
 # User Class
 # Creates User Class for Fitness Planner project
-# Todd Pettit 10/16/14
+# Todd Pettit 10/16/14 (Last edit 10/18/2014)
 
 
 class User(object):
@@ -14,9 +14,9 @@ class User(object):
         self.weight = weight
         self.age = age
         self.activity = activity
-        self.bmr = -1
-        self.maint = -1
-        self.intake = -1
+        self.bmr = -1       # placeholder value
+        self.maint = -1     # placeholder value
+        self.intake = -1    # placeholder value
         User.user_list.append(username)
 
     def __str__(self):

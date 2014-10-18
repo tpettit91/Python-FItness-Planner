@@ -1,6 +1,6 @@
 # Calculator Module
 # Performs calculations for BRM, Caloric Intake, 1RM, and Macros
-# Todd Pettit 10/17/2014
+# Todd Pettit 10/17/2014 (Last edit 10/18/2014)
 import User
 
 
@@ -69,6 +69,7 @@ def calc_max():
 
 
 def main():
+    """ Main func for testing purposes only."""
     test1 = User.User("test1", "m", 72, 190, 23, 4)
     test1.bmr = calc_bmr(test1.age, test1.weight, test1.height, test1.gender)
     test1.maint = calc_maint(test1.bmr, test1.activity)

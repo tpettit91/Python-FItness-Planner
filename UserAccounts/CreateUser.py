@@ -1,7 +1,6 @@
 # User Creator Func
-#Func that creates a user
-#Todd Pettit 10/16/14
-
+# Func that creates a user
+# Todd Pettit 10/16/14 (Last edit 10/18/2014)
 import User
 
 
@@ -23,10 +22,10 @@ def create_user(username):
     print "welcome, ", username
     print "We're going to have to ask you a few questions in order to set up your account."
     gender = ""
-    height = ""
-    weight = ""
-    age = ""
-    activity = ""
+    height = -1
+    weight = -1
+    age = -1
+    activity = -1
 
     while True:
         gender = str(raw_input("Are you male (m), or female (f)?"))
