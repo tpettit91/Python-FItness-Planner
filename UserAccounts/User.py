@@ -14,6 +14,9 @@ class User(object):
         self.weight = weight
         self.age = age
         self.activity = activity
+        self.bmr = -1
+        self.maint = -1
+        self.intake = -1
         User.user_list.append(username)
 
     def __str__(self):
