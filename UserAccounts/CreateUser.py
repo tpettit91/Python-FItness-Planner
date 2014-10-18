@@ -6,6 +6,7 @@ import User
 
 
 def check_username():
+    """Func checks if username exists. if it does it loops again. If it doesnt it calls create_user() and breaks."""
     username = ""
 
     while True:
@@ -72,6 +73,7 @@ def create_user(username):
 
 
 def stop_creating():
+    """Func for stopping main() loop"""
     while True:
         stop_creation = raw_input("Would you like to exit? y n")
         if stop_creation == "y" or stop_creation == "n":
@@ -86,6 +88,7 @@ def stop_creating():
 
 def main():
     check_username()
+
 
 if __name__ == "__main__":
     stopper = ""
