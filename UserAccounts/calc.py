@@ -31,11 +31,12 @@ def calc_bmr(unit, age, weight, height, gender):
         return round(bmr, -2)
 
 
+#activity arg should be an int between 1 and 5 to represent the level of user's activity
 def calc_maint(bmr, activity):
     """calculating suggested calories for weight maintenance taking activity into account"""
     act_dict  = {1: 1.2, 2: 1.375, 3: 1.55, 4: 1.725, 5: 1.9}
     adj       = act_dict[activity]
-    maint = bmr * adj
+    maint     = bmr * adj
     return round(maint, -2)
 
 
