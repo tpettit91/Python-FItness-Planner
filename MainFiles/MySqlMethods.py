@@ -41,6 +41,7 @@ class DbConn(object):
                             WHERE email='%s'""" % (metric, value, email)
         try:
             DbConn.cursor.execute(sqlstatement)
+            DbConn.conn.commit()
             return True
         except:
             DbConn.conn.rollback()

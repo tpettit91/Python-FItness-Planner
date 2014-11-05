@@ -2,6 +2,12 @@
 #Performs Calculations
 #Todd Pettit 10/25/2014
 #----------------------------------------------------------------------------------------------------------------------#
+from datetime import date
+
+
+def calc_age(born):
+    today = date.today()
+    return today.year - born.year - ((today.month, today.day) < (born.month, born.day))
 
 
 def convert_pounds(pounds):
