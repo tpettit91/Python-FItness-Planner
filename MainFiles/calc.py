@@ -55,6 +55,9 @@ def calc_intake(maint, goal, change):
     if goal == "lose":
         intake = maint - change * 500
         return intake
+    if goal == "maint":
+        intake = maint
+        return intake
 
 
 def calc_maximum(reps, weight):
