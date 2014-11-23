@@ -61,6 +61,5 @@ def send_email(address, subject, html_message, string_message):
 
 if __name__ == '__main__':
     html_string = file_to_string('WelcomeEmail.html')
-    text = open('WelcomeEmail.txt', 'r')
-    text_string = text.read()
-    send_email('toddwpettit@outlook.com', 'test', html_string, text_string)
+    text_string = file_to_string('WelcomeEmail.txt')
+    send_email('guy.turner@hotmail.com', 'Welcome to Python Fitness Planner', html_string, text_string)
