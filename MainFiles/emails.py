@@ -7,6 +7,8 @@ import smtplib
 import email.utils
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
+import random
+import string
 
 
 # Create String from Files
@@ -15,6 +17,23 @@ def file_to_string(document):
     file_contents = doc.read()
     doc.close()
     return file_contents
+
+
+def generate_password(size=6, chars=string.ascii_uppercase + string.digits):
+    pw = ''.join(random.choice(chars) for _ in range(size))
+    return pw
+
+
+def password_html(password):
+    reset = file_to_string('PasswordReset.html')
+    reset = reset % password
+    return reset
+
+
+def password_txt(password):
+    reset = file_to_string('PasswordReset.txt')
+    reset = reset % password
+    return reset
 
 
 # Send E-mail
@@ -62,4 +81,8 @@ def send_email(address, subject, html_message, string_message):
 if __name__ == '__main__':
     html_string = file_to_string('WelcomeEmail.html')
     text_string = file_to_string('WelcomeEmail.txt')
+    password = generate_password()
+    reset_html = password_html(password)
+    reset_txt = password_txt(password)
     send_email('guy.turner@hotmail.com', 'Welcome to Python Fitness Planner', html_string, text_string)
+    send_email('guy.turner@hotmail.com', 'Password Reset', reset_html, reset_txt)
