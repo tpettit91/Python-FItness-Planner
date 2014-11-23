@@ -9,12 +9,12 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
 
-# Create String from HTML File
-def html_to_string(html):
-    html = open(html, 'r')
-    html_string = html.read()
-    html.close()
-    return html_string
+# Create String from Files
+def file_to_string(document):
+    doc = open(document, 'r')
+    file_contents = doc.read()
+    doc.close()
+    return file_contents
 
 
 # Send E-mail
@@ -60,7 +60,7 @@ def send_email(address, subject, html_message, string_message):
 
 
 if __name__ == '__main__':
-    html_string = html_to_string('WelcomeEmail.html')
+    html_string = file_to_string('WelcomeEmail.html')
     text = open('WelcomeEmail.txt', 'r')
     text_string = text.read()
-    send_email('toddwpettit@outlook.com','test', html_string, text_string)
+    send_email('toddwpettit@outlook.com', 'test', html_string, text_string)
