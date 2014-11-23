@@ -1,0 +1,13 @@
+Welcome to the Python Fitness Planner!
+
+Welcome,
+
+You are receiving this e-mail because you just created an account on python fitness planner! You're
+one step closer to reaching your fitness goals and living a healthier lifestyle. If you have any
+comments or suggestions, feel free to send an e-mail to python.fitness.planner@gmail.com and we'll
+take your suggestions into consideration. We hope you enjoy our fitness tracking tool and good luck
+on your fitness journey!
+
+Thanks,
+
+Python Fitness Planner Team
